@@ -1,0 +1,1362 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HILO BAGS — 30 napos növekedési terv</title>
+<meta name="description" content="Független stratégiai javaslat a HILO Bags-nek. Egy 30 napos terv arról, hogyan kereshet a brand 5–15 millió forintot az első félévben — hirdetés nélkül." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Geist+Mono:wght@300;400;500&family=Caveat:wght@500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --paper:#f3ede0;
+  --paper-deep:#ebe3d2;
+  --paper-warm:#f7f1e3;
+  --ink:#171411;
+  --ink-soft:#3b342b;
+  --gold:#b8893c;
+  --gold-deep:#8a6428;
+  --rose:#b8755f;
+  --olive:#6a6038;
+  --line:rgba(23,20,17,0.14);
+  --line-soft:rgba(23,20,17,0.08);
+
+  --display:'Italiana',serif;
+  --serif:'Cormorant Garamond',serif;
+  --mono:'Geist Mono',ui-monospace,Menlo,monospace;
+  --hand:'Caveat',cursive;
+
+  --rail:clamp(22px,5vw,84px);
+  --col:minmax(0,1fr);
+
+  --easing-soft:cubic-bezier(.2,.7,.2,1);
+  --easing-pop:cubic-bezier(.16,1,.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{
+  background:
+    radial-gradient(900px 700px at 90% -10%, rgba(184,137,60,0.10), transparent 60%),
+    radial-gradient(700px 600px at -10% 20%, rgba(184,117,95,0.06), transparent 60%),
+    var(--paper);
+}
+img{max-width:100%;display:block}
+a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);transition:all .3s var(--easing-soft)}
+a:hover{color:var(--gold-deep);border-color:var(--gold)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--gold);color:var(--paper)}
+
+/* ─── grain on paper ───────────────────── */
+.grain{
+  position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.18;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.6' numOctaves='1' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.42 0 0 0 0 0.28 0 0 0 0.35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* ─── scroll progress ─────────────────── */
+.progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:200;background:linear-gradient(90deg,transparent,var(--gold) 30%,var(--rose) 70%,transparent)}
+
+/* ─── shared ──────────────────────────── */
+section{position:relative;padding:clamp(64px,9vw,120px) var(--rail);z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:10px;letter-spacing:.36em;color:var(--gold-deep);text-transform:uppercase;font-weight:500}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--gold)}
+.h-display{font-family:var(--display);font-weight:400;letter-spacing:-0.005em;line-height:.96;color:var(--ink);font-size:clamp(40px,7vw,116px)}
+.h-display em{font-family:var(--serif);font-style:italic;font-weight:300;color:var(--gold-deep)}
+.lede{font-family:var(--serif);font-size:clamp(16px,1.35vw,21px);line-height:1.7;color:var(--ink-soft);max-width:60ch}
+.lede em{font-style:italic;color:var(--gold-deep)}
+.kicker{font-family:var(--hand);font-size:24px;color:var(--rose);letter-spacing:.01em;line-height:1}
+.hand{font-family:var(--hand);color:var(--rose);font-size:22px;line-height:1.2;display:inline-block;transform:rotate(-2deg)}
+
+/* underline-scribble */
+.scribble{position:relative;display:inline-block}
+.scribble::after{
+  content:"";position:absolute;left:-4%;right:-4%;bottom:-6px;height:8px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 10'><path d='M2 7 Q 20 1, 40 6 T 80 5 T 118 4' stroke='%23b8755f' stroke-width='2.2' fill='none' stroke-linecap='round'/></svg>") no-repeat center/100% 100%;
+  pointer-events:none;
+}
+
+/* ─── header ──────────────────────────── */
+header.top{position:relative;z-index:60;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;padding:22px var(--rail);border-bottom:1px solid var(--line-soft)}
+.brand{display:inline-flex;align-items:center;gap:14px;font-family:var(--display);font-size:24px;letter-spacing:.14em;color:var(--ink)}
+.brand .pin{width:30px;height:42px;display:inline-block}
+.brand small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.38em;color:var(--gold-deep);margin-top:2px}
+.top-meta{justify-self:end;font-family:var(--mono);font-size:10px;letter-spacing:.32em;color:var(--ink-soft);text-transform:uppercase;text-align:right;line-height:1.7}
+.top-meta b{display:block;color:var(--ink);font-family:var(--display);font-weight:400;font-size:14px;letter-spacing:.04em;text-transform:none}
+
+/* ─── HERO / COVER ────────────────────── */
+.cover{padding-top:clamp(40px,5vw,72px);padding-bottom:clamp(40px,5vw,72px);position:relative;overflow:hidden}
+.cover-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:end;position:relative}
+.cover-meta{display:grid;grid-template-columns:repeat(3,auto);gap:32px;font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--ink-soft);text-transform:uppercase;margin-bottom:24px}
+.cover-meta b{display:block;color:var(--ink);font-family:var(--display);font-weight:400;font-size:18px;letter-spacing:.04em;text-transform:none}
+.cover h1{margin:0;font-size:clamp(48px,8.5vw,148px);line-height:.92}
+.cover-sub{margin-top:36px;max-width:64ch;font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.6vw,24px);line-height:1.5;color:var(--ink-soft)}
+.cover-tape{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cover-tape div{background:var(--paper);padding:22px;display:flex;flex-direction:column;gap:6px}
+.cover-tape h3{margin:0;font-family:var(--display);font-size:38px;color:var(--ink);font-weight:400;line-height:1}
+.cover-tape h3 em{font-family:var(--serif);font-style:italic;color:var(--gold-deep);font-weight:300}
+.cover-tape span{font-family:var(--mono);font-size:10px;letter-spacing:.28em;color:var(--ink-soft);text-transform:uppercase}
+.cover-tape small{font-family:var(--serif);font-style:italic;color:var(--ink-soft);font-size:13px;margin-top:auto;line-height:1.4}
+
+.cover-pin{position:absolute;top:-40px;right:-10px;width:280px;height:380px;opacity:.18;transform:rotate(8deg);z-index:0}
+
+/* ─── HELLO LETTER ────────────────────── */
+.hello{background:var(--paper-warm);border-block:1px solid var(--line-soft);position:relative}
+.hello-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.hello h2{margin:14px 0 0;font-family:var(--display);font-size:clamp(40px,5vw,72px);line-height:1}
+.hello-letter{font-family:var(--serif);font-size:18px;line-height:1.75;color:var(--ink-soft)}
+.hello-letter p:first-child::first-letter{font-family:var(--display);font-size:74px;float:left;line-height:.8;margin:8px 12px -4px 0;color:var(--gold-deep)}
+.hello-letter p{margin:0 0 20px}
+.hello-letter b{color:var(--ink);font-weight:500}
+.hello-letter em{color:var(--gold-deep);font-style:italic}
+.signature{margin-top:24px;display:flex;align-items:center;gap:16px}
+.signature-ink{font-family:var(--hand);font-size:38px;color:var(--rose);transform:rotate(-3deg);line-height:1}
+.signature-meta{font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--ink-soft);line-height:1.6;text-transform:uppercase}
+.signature-meta b{display:block;color:var(--ink);font-family:var(--display);font-weight:400;font-size:14px;letter-spacing:.04em;text-transform:none}
+
+/* ─── 3 PROBLEMS ──────────────────────── */
+.problems{position:relative}
+.problems-head{max-width:60ch;margin-bottom:60px}
+.problems-head h2{margin:14px 0 20px;font-family:var(--display);font-size:clamp(38px,5vw,80px);line-height:1}
+.problems-head h2 em{color:var(--rose);font-style:italic;font-family:var(--serif);font-weight:300}
+.problem-list{display:grid;gap:24px}
+.problem{display:grid;grid-template-columns:88px 1fr 1fr;gap:36px;align-items:start;padding:36px 0;border-top:1px solid var(--line)}
+.problem:first-child{border-top-color:var(--ink)}
+.problem .num{font-family:var(--display);font-size:80px;line-height:.8;color:var(--gold-deep);letter-spacing:-0.02em}
+.problem h3{margin:0 0 14px;font-family:var(--display);font-size:32px;color:var(--ink);font-weight:400;line-height:1.05;letter-spacing:.01em}
+.problem h3 em{color:var(--rose);font-style:italic;font-family:var(--serif);font-weight:300}
+.problem p{margin:0 0 12px;font-size:17px;line-height:1.65;color:var(--ink-soft)}
+.problem .side{padding:24px;background:var(--paper-deep);border:1px solid var(--line-soft);font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ink-soft);line-height:1.7}
+.problem .side b{display:block;color:var(--gold-deep);font-family:var(--mono);font-size:10px;letter-spacing:.32em;text-transform:uppercase;margin-bottom:10px}
+.problem .side em{font-family:var(--serif);font-style:italic;font-size:14px;display:block;margin-top:8px;color:var(--rose)}
+
+/* ─── BIG NUMBER ANCHOR ──────────────── */
+.bignum{padding-block:clamp(40px,6vw,80px);background:linear-gradient(180deg,var(--paper) 0%,var(--paper-warm) 100%);border-block:1px solid var(--line-soft);text-align:center}
+.bignum span{display:block;font-family:var(--hand);font-size:30px;color:var(--rose);transform:rotate(-1deg)}
+.bignum h2{margin:14px auto 8px;font-family:var(--display);font-size:clamp(80px,16vw,240px);line-height:.85;color:var(--ink);letter-spacing:-0.02em;max-width:14ch}
+.bignum h2 em{font-family:var(--serif);font-style:italic;color:var(--gold-deep);font-weight:300}
+.bignum p{margin:14px auto 0;max-width:50ch;font-style:italic;color:var(--ink-soft);font-size:18px}
+
+/* ─── 3 MOVES ─────────────────────────── */
+.moves{background:var(--paper-warm);border-block:1px solid var(--line-soft)}
+.moves-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:60px}
+.moves-head h2{margin:8px 0 0;font-family:var(--display);font-size:clamp(42px,6vw,96px);line-height:.96}
+.moves-head h2 em{color:var(--gold-deep);font-style:italic;font-family:var(--serif);font-weight:300}
+.moves-head .note{font-family:var(--hand);color:var(--rose);font-size:26px;transform:rotate(-2deg);line-height:1.1;text-align:right;max-width:24ch}
+
+.move{position:relative;display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;padding:48px 0;border-top:1px solid var(--ink);align-items:start}
+.move:last-child{border-bottom:1px solid var(--ink)}
+.move-left{position:relative}
+.move-tag{display:inline-flex;align-items:center;gap:10px;padding:6px 12px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.32em;text-transform:uppercase}
+.move.priority .move-tag{background:var(--gold-deep);color:var(--paper)}
+.move h3{margin:18px 0 12px;font-family:var(--display);font-size:clamp(34px,4vw,60px);line-height:1;letter-spacing:.01em;color:var(--ink)}
+.move h3 em{color:var(--gold-deep);font-style:italic;font-family:var(--serif);font-weight:300}
+.move .lead{font-style:italic;color:var(--rose);font-size:19px;margin:0 0 16px;line-height:1.4}
+.move-cost{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap}
+.move-cost span{padding:8px 14px;border:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ink-soft);text-transform:uppercase;background:var(--paper)}
+.move-cost span b{color:var(--gold-deep);font-weight:500}
+
+.move-right p{margin:0 0 16px;font-size:17px;line-height:1.7;color:var(--ink-soft)}
+.move-right ul{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}
+.move-right ul li{position:relative;padding-left:32px;font-size:16px;color:var(--ink-soft);line-height:1.55}
+.move-right ul li::before{content:"";position:absolute;left:0;top:.6em;width:18px;height:1px;background:var(--gold)}
+.move-right ul li b{color:var(--ink);font-weight:500}
+.move-right .example{margin-top:24px;padding:20px 24px;background:var(--paper-deep);border-left:3px solid var(--gold);font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink);line-height:1.6}
+.move-right .example b{display:block;font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.32em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:8px;font-weight:500}
+
+.move-projection{margin-top:24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.move-projection div{padding:18px;background:var(--paper);border:1px solid var(--line-soft)}
+.move-projection div small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.32em;color:var(--ink-soft);text-transform:uppercase;margin-bottom:8px}
+.move-projection div b{font-family:var(--display);font-size:30px;color:var(--ink);font-weight:400;line-height:1}
+.move-projection div b em{color:var(--gold-deep);font-style:italic;font-family:var(--serif);font-weight:300}
+
+.priority-stamp{position:absolute;top:-10px;right:-10px;width:120px;height:120px;border-radius:50%;border:1.5px dashed var(--rose);display:flex;align-items:center;justify-content:center;font-family:var(--hand);font-size:22px;color:var(--rose);transform:rotate(-12deg);line-height:1.1;text-align:center}
+
+/* ─── expand / details ────────────────── */
+details{margin-top:14px}
+details summary{
+  list-style:none;cursor:pointer;
+  font-family:var(--mono);font-size:10px;letter-spacing:.32em;color:var(--gold-deep);text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:10px;
+  padding:6px 0;border-bottom:1px solid var(--gold-deep);
+  transition:all .3s var(--easing-soft)
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";font-family:var(--display);font-size:18px;line-height:1;margin-top:-2px;transition:transform .3s var(--easing-soft)}
+details[open] summary::after{content:"−"}
+details summary:hover{color:var(--ink)}
+details > .more{margin-top:18px;animation:fadeIn .45s var(--easing-soft);font-size:16px;line-height:1.7;color:var(--ink-soft)}
+details > .more p{margin:0 0 12px}
+details > .more ul{list-style:none;margin:14px 0;padding:0;display:grid;gap:12px}
+details > .more ul li{position:relative;padding-left:30px;font-size:16px;line-height:1.55;color:var(--ink-soft)}
+details > .more ul li::before{content:"";position:absolute;left:0;top:.6em;width:18px;height:1px;background:var(--gold)}
+details > .more ul li b{color:var(--ink);font-weight:500}
+details > .more .example{margin-top:18px;padding:20px 24px;background:var(--paper-deep);border-left:3px solid var(--gold);font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink);line-height:1.6}
+details > .more .example b{display:block;font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.32em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:8px;font-weight:500}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── low-budget callout ──────────────── */
+.callout{
+  margin:32px 0;padding:24px 28px;
+  background:linear-gradient(135deg,rgba(184,117,95,0.10),rgba(184,137,60,0.08));
+  border:1px dashed var(--rose);
+  position:relative;
+  display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:start
+}
+.callout .ic{width:48px;height:48px;border-radius:50%;background:var(--rose);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:22px;line-height:1}
+.callout h4{margin:0 0 6px;font-family:var(--display);font-size:22px;color:var(--ink);font-weight:400;letter-spacing:.01em}
+.callout p{margin:0;font-size:15px;line-height:1.6;color:var(--ink-soft)}
+.callout p b{color:var(--ink)}
+
+/* ─── EXCHANGE TABLE ──────────────────── */
+.exchange{background:linear-gradient(180deg,var(--paper-warm),var(--paper));border-block:1px solid var(--line-soft)}
+.exchange-head{max-width:60ch;margin-bottom:48px}
+.exchange-head h2{margin:14px 0 18px;font-family:var(--display);font-size:clamp(40px,5.5vw,84px);line-height:.96}
+.exchange-head h2 em{color:var(--gold-deep);font-style:italic;font-family:var(--serif);font-weight:300}
+.exrow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:32px;padding:32px 0;border-top:1px solid var(--line)}
+.exrow:first-child{border-top-color:var(--ink)}
+.exrow:last-child{border-bottom:1px solid var(--ink)}
+.exrow .a, .exrow .b{font-family:var(--display);font-size:clamp(22px,2.4vw,34px);color:var(--ink);line-height:1.1;font-weight:400;letter-spacing:.01em}
+.exrow .a small, .exrow .b small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.32em;color:var(--ink-soft);text-transform:uppercase;margin-bottom:8px}
+.exrow .b{text-align:right}
+.exrow .b strong{color:var(--gold-deep);font-style:italic;font-family:var(--serif);font-weight:400}
+.exrow .arr{width:50px;color:var(--rose);font-family:var(--hand);font-size:30px;text-align:center;line-height:1}
+
+/* ─── OUTREACH ───────────────────────── */
+.outreach{position:relative}
+.outreach-head{max-width:62ch;margin-bottom:48px}
+.outreach-head h2{margin:14px 0 18px;font-family:var(--display);font-size:clamp(40px,5.5vw,84px);line-height:.96}
+.outreach-head h2 em{color:var(--rose);font-style:italic;font-family:var(--serif);font-weight:300}
+.outreach-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start}
+.steps{display:grid;gap:18px}
+.step{display:grid;grid-template-columns:64px 1fr;gap:24px;padding:24px;background:var(--paper-warm);border:1px solid var(--line-soft);align-items:start}
+.step .n{font-family:var(--display);font-size:54px;color:var(--gold-deep);line-height:.8;font-weight:400}
+.step h4{margin:0 0 6px;font-family:var(--display);font-size:22px;color:var(--ink);font-weight:400;letter-spacing:.01em}
+.step p{margin:0;font-size:15px;line-height:1.55;color:var(--ink-soft)}
+.step .time{display:inline-block;margin-top:10px;padding:4px 10px;font-family:var(--mono);font-size:10px;letter-spacing:.28em;color:var(--gold-deep);background:rgba(184,137,60,0.12);text-transform:uppercase}
+
+.template{position:sticky;top:24px;padding:32px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);position:relative}
+.template .ribbon{position:absolute;top:-12px;left:24px;padding:5px 12px;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:10px;letter-spacing:.32em;text-transform:uppercase;font-weight:500}
+.template h4{margin:14px 0 6px;font-family:var(--display);font-size:24px;color:var(--paper);font-weight:400;letter-spacing:.02em}
+.template .sub{font-family:var(--hand);color:var(--gold);font-size:22px;line-height:1;display:block;margin-bottom:18px}
+.template pre{margin:0;padding:22px;background:rgba(243,237,224,0.04);border:1px solid rgba(243,237,224,0.12);font-family:var(--mono);font-size:13px;line-height:1.7;color:rgba(243,237,224,0.92);white-space:pre-wrap;letter-spacing:.01em;font-weight:300}
+.template .copy{margin-top:14px;width:100%;padding:14px;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;border:0;cursor:pointer;transition:background .3s var(--easing-soft)}
+.template .copy:hover{background:#e0a850}
+.template .copy.done{background:#84a96a}
+
+.targets{margin-top:42px;padding:32px;background:var(--paper-deep);border:1px solid var(--line)}
+.targets h4{margin:0 0 18px;font-family:var(--mono);font-size:11px;letter-spacing:.32em;color:var(--gold-deep);text-transform:uppercase;font-weight:500}
+.targets .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.targets .grid a{padding:14px;background:var(--paper);border:1px solid var(--line-soft);font-family:var(--display);font-size:18px;color:var(--ink);text-align:center;border-bottom:1px solid var(--line-soft);transition:all .3s var(--easing-soft)}
+.targets .grid a:hover{border-color:var(--gold);background:var(--paper-warm);color:var(--gold-deep)}
+.targets .grid a small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.28em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.targets em{display:block;margin-top:14px;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-soft)}
+
+@media (max-width:980px){
+  .exrow{grid-template-columns:1fr;gap:8px;padding:20px 0}
+  .exrow .arr{display:none}
+  .exrow .b{text-align:left}
+  .outreach-grid{grid-template-columns:1fr;gap:32px}
+  .template{position:relative;top:0}
+  .targets .grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ─── FESZTIVÁL STRATÉGIA ─────────────── */
+.fest{background:linear-gradient(180deg,#0d0a07,#080605);color:var(--paper);border-block:1px solid var(--line-soft);position:relative;overflow:hidden}
+.fest::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 40% at 80% 20%,rgba(184,117,95,0.18),transparent 60%),radial-gradient(50% 50% at 20% 80%,rgba(184,137,60,0.12),transparent 60%);pointer-events:none}
+.fest .eyebrow{color:var(--rose)}
+.fest .eyebrow::before{background:var(--rose)}
+.fest-head{position:relative;max-width:64ch;margin-bottom:48px}
+.fest-head h2{margin:14px 0 18px;font-family:var(--display);font-size:clamp(40px,5.8vw,90px);line-height:.95;color:var(--paper);font-weight:400}
+.fest-head h2 em{color:var(--rose);font-style:italic;font-family:var(--serif);font-weight:300}
+.fest-head p{font-family:var(--serif);font-size:clamp(16px,1.4vw,21px);line-height:1.65;color:rgba(243,237,224,0.78);max-width:60ch}
+.fest-head p b{color:var(--paper)}
+
+.fest-timeline{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:32px 0;margin-bottom:64px}
+.fest-timeline::before{content:"";position:absolute;left:0;right:0;top:48%;height:1px;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 14px)}
+.fest-week{position:relative;text-align:center}
+.fest-week .dot{width:14px;height:14px;border-radius:50%;background:var(--paper);border:2px solid var(--rose);margin:0 auto 14px;position:relative;z-index:2}
+.fest-week.now .dot{background:var(--rose);box-shadow:0 0 0 4px rgba(184,117,95,0.25),0 0 0 8px rgba(184,117,95,0.12)}
+.fest-week h4{margin:0 0 4px;font-family:var(--display);font-size:18px;color:var(--paper);font-weight:400;letter-spacing:.04em}
+.fest-week .when{font-family:var(--mono);font-size:9px;letter-spacing:.32em;color:var(--gold);text-transform:uppercase}
+.fest-week .act{display:block;margin-top:8px;font-size:13px;color:rgba(243,237,224,0.7);line-height:1.4;font-style:italic}
+
+.fest-actions{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.fa{padding:28px;border:1px solid rgba(243,237,224,0.16);background:linear-gradient(135deg,rgba(243,237,224,0.04),rgba(0,0,0,0));position:relative;transition:all .4s var(--easing-soft)}
+.fa:hover{border-color:var(--rose);background:linear-gradient(135deg,rgba(184,117,95,0.10),rgba(0,0,0,0))}
+.fa .tag{font-family:var(--mono);font-size:10px;letter-spacing:.32em;color:var(--rose);text-transform:uppercase;display:block;margin-bottom:10px}
+.fa h4{margin:0 0 8px;font-family:var(--display);font-size:24px;color:var(--paper);font-weight:400;letter-spacing:.02em}
+.fa p{margin:0;font-size:15px;line-height:1.6;color:rgba(243,237,224,0.78)}
+.fa p b{color:var(--paper)}
+.fa .meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+.fa .meta span{padding:5px 10px;font-family:var(--mono);font-size:9px;letter-spacing:.24em;color:var(--gold);background:rgba(184,137,60,0.10);text-transform:uppercase;border:1px solid rgba(184,137,60,0.32)}
+
+.fest-urgency{margin-top:48px;padding:28px 32px;background:rgba(184,117,95,0.10);border:1px dashed var(--rose);display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+.fest-urgency .ic{width:48px;height:48px;border-radius:50%;background:var(--rose);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:22px;font-weight:400}
+.fest-urgency h4{margin:0 0 6px;font-family:var(--display);font-size:24px;color:var(--paper);font-weight:400;letter-spacing:.01em}
+.fest-urgency p{margin:0;font-size:15px;line-height:1.6;color:rgba(243,237,224,0.80)}
+.fest-urgency p b{color:var(--paper)}
+
+@media (max-width:980px){
+  .fest-timeline{grid-template-columns:1fr;gap:18px}
+  .fest-timeline::before{display:none}
+  .fest-actions{grid-template-columns:1fr}
+}
+
+/* ─── SHOOT GUIDE ─────────────────────── */
+.shoot{background:linear-gradient(180deg,var(--paper-warm) 0,var(--paper) 100%);border-block:1px solid var(--line-soft)}
+.shoot-head{max-width:62ch;margin-bottom:48px}
+.shoot-head h2{margin:14px 0 18px;font-family:var(--display);font-size:clamp(40px,5.5vw,84px);line-height:.96}
+.shoot-head h2 em{color:var(--gold-deep);font-style:italic;font-family:var(--serif);font-weight:300}
+.shoot-section{margin-top:48px}
+.shoot-section + .shoot-section{margin-top:80px;border-top:1px solid var(--line);padding-top:64px}
+.shoot-section-head{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:end;margin-bottom:32px}
+.shoot-section-head h3{margin:0;font-family:var(--display);font-size:clamp(28px,3.5vw,52px);line-height:1;color:var(--ink);font-weight:400;letter-spacing:.01em}
+.shoot-section-head h3 em{color:var(--gold-deep);font-style:italic;font-family:var(--serif);font-weight:300}
+.shoot-section-head .step-n{font-family:var(--display);font-size:84px;line-height:.7;color:var(--rose);font-weight:400}
+.shoot-section-head .hint{font-family:var(--hand);color:var(--rose);font-size:20px;line-height:1.2;text-align:right;max-width:24ch;justify-self:end;align-self:start;padding-top:14px}
+
+.shoot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.s-card{padding:24px;background:var(--paper);border:1px solid var(--line-soft);position:relative;overflow:hidden;transition:all .35s var(--easing-soft)}
+.s-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.s-card .tag{font-family:var(--mono);font-size:10px;letter-spacing:.32em;color:var(--gold-deep);text-transform:uppercase;display:block;margin-bottom:8px}
+.s-card h4{margin:0 0 8px;font-family:var(--display);font-size:22px;color:var(--ink);font-weight:400;letter-spacing:.01em;line-height:1.1}
+.s-card p{margin:0;font-size:14px;line-height:1.55;color:var(--ink-soft)}
+.s-card .ic{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--paper-deep);font-family:var(--display);font-size:18px;color:var(--gold-deep);margin-bottom:14px}
+
+/* big numbered row variant (Mikor + Mit fotózz) */
+.shoot-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.s-row{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:20px;background:var(--paper);border:1px solid var(--line-soft);align-items:start;transition:all .35s var(--easing-soft)}
+.s-row:hover{border-color:var(--gold)}
+.s-row .n{font-family:var(--display);font-size:28px;line-height:1;color:var(--gold-deep)}
+.s-row h4{margin:0 0 4px;font-family:var(--display);font-size:18px;color:var(--ink);font-weight:400;letter-spacing:.01em}
+.s-row p{margin:0;font-size:14px;line-height:1.55;color:var(--ink-soft)}
+.s-row em{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.28em;color:var(--rose);text-transform:uppercase;display:block;margin-top:6px}
+
+/* Avoid / Do list */
+.shoot-do{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--ink)}
+.shoot-do > div{padding:28px;background:var(--paper)}
+.shoot-do .yes{background:rgba(132,169,106,0.08)}
+.shoot-do .no{background:rgba(184,117,95,0.08)}
+.shoot-do h5{margin:0 0 14px;font-family:var(--mono);font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:500}
+.shoot-do .yes h5{color:#5e7d44}
+.shoot-do .no h5{color:var(--rose)}
+.shoot-do ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.shoot-do li{position:relative;padding-left:28px;font-size:15px;line-height:1.5;color:var(--ink-soft)}
+.shoot-do .yes li::before{content:"✓";position:absolute;left:0;color:#5e7d44;font-family:var(--display);font-size:18px;line-height:1}
+.shoot-do .no li::before{content:"✕";position:absolute;left:0;color:var(--rose);font-family:var(--display);font-size:18px;line-height:1}
+
+/* checklist box */
+.checklist{margin-top:64px;padding:32px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);position:relative}
+.checklist::before{content:"";position:absolute;top:-12px;left:24px;padding:5px 12px;background:var(--rose);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;content:"PRINTELD KI · VIDD MAGADDAL"}
+.checklist h4{margin:14px 0 6px;font-family:var(--display);font-size:28px;color:var(--paper);font-weight:400;letter-spacing:.02em}
+.checklist .sub{font-family:var(--hand);color:var(--gold);font-size:22px;line-height:1;display:block;margin-bottom:22px}
+.checklist ol{margin:0;padding:0 0 0 22px;display:grid;gap:10px;color:rgba(243,237,224,0.85);font-size:15px;line-height:1.55}
+.checklist ol li b{color:var(--paper);font-weight:500}
+.checklist ol li i{color:var(--gold);font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.18em}
+
+@media (max-width:980px){
+  .shoot-grid{grid-template-columns:1fr 1fr}
+  .shoot-list{grid-template-columns:1fr}
+  .shoot-do{grid-template-columns:1fr}
+  .shoot-section-head{grid-template-columns:1fr}
+  .shoot-section-head .hint{text-align:left;justify-self:start}
+}
+@media (max-width:560px){
+  .shoot-grid{grid-template-columns:1fr}
+}
+
+/* ─── 30 DAY PLAN ─────────────────────── */
+.plan-head{max-width:60ch;margin-bottom:48px}
+.plan-head h2{margin:14px 0 18px;font-family:var(--display);font-size:clamp(40px,5.5vw,84px);line-height:.96}
+.plan-head h2 em{color:var(--rose);font-style:italic;font-family:var(--serif);font-weight:300}
+.plan{display:grid;gap:1px;background:var(--line);border:1px solid var(--ink)}
+.plan-row{display:grid;grid-template-columns:120px 1fr 1.6fr 180px;background:var(--paper);align-items:start;padding:24px 28px;gap:24px}
+.plan-row.head{background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:11px;letter-spacing:.32em;text-transform:uppercase}
+.plan-row.head > *{color:var(--paper)}
+.plan-week{font-family:var(--display);font-size:38px;line-height:1;color:var(--gold-deep);font-weight:400}
+.plan-row.head .plan-week{font-family:var(--mono);font-size:11px;color:var(--paper)}
+.plan-title{font-family:var(--display);font-size:22px;color:var(--ink);font-weight:400;letter-spacing:.02em;line-height:1.15}
+.plan-detail{font-size:15px;color:var(--ink-soft);line-height:1.6}
+.plan-cost{font-family:var(--mono);font-size:14px;color:var(--gold-deep);letter-spacing:.06em;text-align:right;line-height:1.5}
+.plan-cost b{display:block;font-family:var(--display);color:var(--ink);font-size:24px;font-weight:400}
+
+.plan-foot{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.plan-foot div{padding:32px;background:var(--paper-warm);border:1px solid var(--line)}
+.plan-foot small{font-family:var(--mono);font-size:10px;letter-spacing:.32em;color:var(--ink-soft);text-transform:uppercase}
+.plan-foot b{display:block;font-family:var(--display);font-size:64px;line-height:1;color:var(--ink);margin:10px 0 8px;font-weight:400}
+.plan-foot b em{color:var(--gold-deep);font-style:italic;font-family:var(--serif);font-weight:300}
+.plan-foot p{margin:0;font-style:italic;color:var(--ink-soft);line-height:1.5}
+
+/* ─── DIVISION OF LABOR ─────────────── */
+.split{background:var(--paper-deep);border-block:1px solid var(--line-soft);position:relative}
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.split-card{padding:36px;background:var(--paper);border:1px solid var(--line);position:relative}
+.split-card.me{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.split-card.me h3,.split-card.me li b{color:var(--paper)}
+.split-card.me li{color:rgba(243,237,224,0.8)}
+.split-card.me li::before{background:var(--gold)}
+.split-card.you{border-color:var(--rose)}
+.split-card h3{margin:0 0 6px;font-family:var(--display);font-size:38px;color:var(--ink);font-weight:400;letter-spacing:.02em;line-height:1}
+.split-card .sub{font-family:var(--hand);font-size:24px;color:var(--rose);line-height:1;display:block;margin-bottom:18px}
+.split-card.me .sub{color:var(--gold)}
+.split-card ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.split-card li{position:relative;padding-left:30px;font-size:16px;line-height:1.55;color:var(--ink-soft)}
+.split-card li::before{content:"";position:absolute;left:0;top:.55em;width:18px;height:1px;background:var(--gold-deep)}
+.split-card li b{color:var(--ink);font-weight:500}
+
+/* ─── MANIFESTO QUOTE ─────────────────── */
+.manifesto{padding:clamp(80px,12vw,160px) var(--rail);text-align:center;background:linear-gradient(180deg,var(--paper),var(--paper-warm))}
+.manifesto blockquote{margin:0 auto;max-width:24ch;font-family:var(--display);font-size:clamp(40px,6vw,108px);line-height:1.05;color:var(--ink);letter-spacing:-0.005em;font-weight:400}
+.manifesto blockquote em{color:var(--gold-deep);font-style:italic;font-family:var(--serif);font-weight:300}
+.manifesto cite{display:block;margin-top:32px;font-family:var(--mono);font-size:11px;letter-spacing:.32em;color:var(--ink-soft);text-transform:uppercase;font-style:normal}
+
+/* ─── CTA ─────────────────────────────── */
+.cta{background:var(--ink);color:var(--paper);position:relative;overflow:hidden;padding-block:clamp(80px,11vw,160px)}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 80% 20%,rgba(184,137,60,0.18),transparent 60%),radial-gradient(50% 50% at 20% 80%,rgba(184,117,95,0.10),transparent 60%);pointer-events:none}
+.cta-grid{position:relative;display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center}
+.cta h2{margin:14px 0 24px;font-family:var(--display);font-size:clamp(44px,7vw,124px);line-height:.94;color:var(--paper)}
+.cta h2 em{color:var(--gold);font-style:italic;font-family:var(--serif);font-weight:300}
+.cta p{font-size:19px;line-height:1.6;color:rgba(243,237,224,0.78);font-style:italic;max-width:48ch}
+.cta .eyebrow{color:var(--gold)}
+.cta .eyebrow::before{background:var(--gold)}
+.contact-card{padding:36px;border:1px solid rgba(243,237,224,0.18);background:rgba(243,237,224,0.04)}
+.contact-card h4{margin:0 0 8px;font-family:var(--display);font-size:32px;color:var(--paper);font-weight:400}
+.contact-card .sub{font-family:var(--hand);color:var(--gold);font-size:22px;line-height:1;display:block;margin-bottom:22px}
+.contact-row{display:grid;gap:14px;font-family:var(--mono);font-size:13px;letter-spacing:.04em}
+.contact-row a{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;color:var(--paper);border:0;padding:14px 16px;background:rgba(243,237,224,0.04);transition:all .3s var(--easing-soft)}
+.contact-row a:hover{background:rgba(184,137,60,0.18);color:var(--gold)}
+.contact-row a small{font-family:var(--mono);font-size:9px;letter-spacing:.32em;color:rgba(243,237,224,0.5);text-transform:uppercase;display:block;margin-bottom:4px}
+.contact-row a b{display:block;font-family:var(--display);font-weight:400;font-size:18px;letter-spacing:.02em;color:var(--paper)}
+.contact-row a:hover b{color:var(--gold)}
+.contact-row a .ic{width:44px;height:44px;border-radius:50%;border:1px solid rgba(243,237,224,0.2);display:inline-flex;align-items:center;justify-content:center}
+
+/* ─── FOOTER ─────────────────────────── */
+footer.foot{padding:36px var(--rail);background:var(--paper);border-top:1px solid var(--line-soft);display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--ink-soft);text-transform:uppercase}
+footer.foot .center{display:inline-flex;align-items:center;gap:10px;text-align:center}
+footer.foot svg{width:22px;height:30px}
+footer.foot .right{justify-self:end}
+
+/* ─── responsive ──────────────────────── */
+@media (max-width:980px){
+  header.top{grid-template-columns:1fr;text-align:left;gap:14px}
+  .top-meta{justify-self:start;text-align:left}
+  .cover-meta{grid-template-columns:1fr;gap:12px}
+  .cover-tape{grid-template-columns:1fr 1fr}
+  .hello-grid,.split-grid,.cta-grid{grid-template-columns:1fr;gap:32px}
+  .problem{grid-template-columns:60px 1fr;gap:24px}
+  .problem .side{grid-column:1/-1;margin-top:0}
+  .move{grid-template-columns:1fr;gap:24px}
+  .move-projection{grid-template-columns:1fr}
+  .plan-row{grid-template-columns:80px 1fr;gap:14px}
+  .plan-row.head{display:none}
+  .plan-detail,.plan-cost{grid-column:1/-1}
+  .plan-cost{text-align:left}
+  .plan-foot{grid-template-columns:1fr}
+  .moves-head{grid-template-columns:1fr}
+  footer.foot{grid-template-columns:1fr;text-align:center}
+  footer.foot .right{justify-self:center}
+}
+@media (max-width:560px){
+  :root{--rail:18px}
+  .cover-tape{grid-template-columns:1fr}
+  .problem .num{font-size:48px}
+}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="progress" id="progress"></div>
+
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <linearGradient id="goldFoil" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d8a850"/>
+      <stop offset="50%" stop-color="#b8893c"/>
+      <stop offset="100%" stop-color="#7a5520"/>
+    </linearGradient>
+    <symbol id="pineapple" viewBox="0 0 200 280">
+      <g stroke="url(#goldFoil)" stroke-width="1.6" fill="none" stroke-linecap="round">
+        <path d="M100 16 L100 88"/>
+        <path d="M100 22 L84 70"/>
+        <path d="M100 22 L116 70"/>
+        <path d="M100 30 L66 78"/>
+        <path d="M100 30 L134 78"/>
+        <path d="M100 38 L52 92"/>
+        <path d="M100 38 L148 92"/>
+      </g>
+      <ellipse cx="100" cy="172" rx="62" ry="86" stroke="url(#goldFoil)" stroke-width="1.6" fill="rgba(184,137,60,0.04)"/>
+      <g stroke="url(#goldFoil)" stroke-width="0.7" fill="none" opacity="0.8">
+        <path d="M48 130 L100 174 L48 218"/>
+        <path d="M62 116 L100 156 L62 196 L100 236"/>
+        <path d="M76 102 L100 138 L76 178 L100 220 L76 254"/>
+        <path d="M90 92 L100 122 L90 162 L100 198 L90 240"/>
+        <path d="M152 130 L100 174 L152 218"/>
+        <path d="M138 116 L100 156 L138 196 L100 236"/>
+        <path d="M124 102 L100 138 L124 178 L100 220 L124 254"/>
+        <path d="M110 92 L100 122 L110 162 L100 198 L110 240"/>
+      </g>
+    </symbol>
+    <symbol id="mail-i" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="1.5" stroke="currentColor" stroke-width="1.4" fill="none"/><path d="M3 7l9 7 9-7" stroke="currentColor" stroke-width="1.4" fill="none"/></symbol>
+    <symbol id="phone-i" viewBox="0 0 24 24"><path d="M6 4h3l1.5 4-2 1.5a12 12 0 006 6L16 13.5l4 1.5v3a2 2 0 01-2 2C11 20 4 13 4 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.4" fill="none"/></symbol>
+    <symbol id="calendar-i" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="1.5" stroke="currentColor" stroke-width="1.4" fill="none"/><path d="M4 10h16M9 4v4M15 4v4" stroke="currentColor" stroke-width="1.4"/></symbol>
+  </defs>
+</svg>
+
+<!-- ═══ TOP ═══ -->
+<header class="top">
+  <a href="#" class="brand">
+    <span class="pin"><svg width="100%" height="100%"><use href="#pineapple"/></svg></span>
+    <span>HILO BAGS<small>ZSOLTI → ATI · BARÁTI TIPP</small></span>
+  </a>
+  <div></div>
+  <div class="top-meta">
+    <b>2026. május 10.</b>
+    Csak neked · ne mutasd senkinek :)
+  </div>
+</header>
+
+<!-- ═══ COVER ═══ -->
+<section class="cover">
+  <svg class="cover-pin" viewBox="0 0 200 280"><use href="#pineapple"/></svg>
+  <div class="cover-grid">
+    <div>
+      <div class="cover-meta">
+        <span>SZERZŐ<b>Pintér Zsolt</b></span>
+        <span>OLDAL<b>hilobags.com</b></span>
+        <span>DOKUMENTUM<b>Növekedési Terv v1</b></span>
+      </div>
+      <span class="eyebrow">Atinak — 30 napos terv · MOST kell lépni</span>
+      <h1 class="h-display">Ahogyan a HILO <em>5–15 milliót</em> hozhat az első félévben —<br><span class="scribble">hirdetés nélkül</span>.</h1>
+      <p class="cover-sub">Magyarországon kézzel készült prémium táskák. Nemzetközi piacra való termék — magyar üzleti modellben. <b style="color:var(--rose)">DAAD pár hét múlva, Sziget · Ozora augusztusban</b> — a fesztiválszezon a HILO legjobb ablaka, és pont a te szcénád. Az alábbi három lépés + a fesztivál-stratégia ezt nyitja meg.</p>
+    </div>
+  </div>
+  <div class="cover-tape">
+    <div><span>1.</span><h3><em>0 Ft</em></h3><small>Ennyit költesz az első — és legfontosabb — lépésre. Semmit.</small></div>
+    <div><span>2.</span><h3>~40.000<em>Ft</em></h3><small>Az egész 30 napra ennyi pénz kell — egyszer. Ha bír a kassza, többet is.</small></div>
+    <div><span>3.</span><h3>2–5 <em>M Ft</em></h3><small>Ennyit hoz vissza 3 hónap alatt, óvatosan becsülve.</small></div>
+    <div><span>4.</span><h3>15–30 <em>M Ft</em></h3><small>Ennyit hozhat 1 év alatt — ugyanazzal a termékkel, ami most a polcon van.</small></div>
+  </div>
+</section>
+
+<!-- ═══ HELLO ═══ -->
+<section class="hello">
+  <div class="hello-grid">
+    <div>
+      <span class="eyebrow">Szia</span>
+      <h2>Atikám,</h2>
+      <div class="signature" style="margin-top:36px">
+        <span class="signature-ink">Zsolti</span>
+        <span class="signature-meta">
+          <b>Pintér Zsolt</b>
+          Hana keresztapja-társad · vasárnap esti spekuláns
+        </span>
+      </div>
+    </div>
+    <div class="hello-letter">
+      <p>Atikám, megnéztem a hilobags.com-ot, és az első benyomásom: <b>gyönyörű termék, rossz polcra pakolva</b>. A táska szép, a kézműves részletek prémium szintűek — csak a piac, amibe most szól, nem az, amelyik fizetne érte. Jó termék, rossz pozícionálás — ez a legolcsóbban javítható probléma az e-kereskedelemben.</p>
+      <p>Összeraktam neked egy rövid tervet: három konkrét lépés, mindhez számokkal, és <b>low-budgetben</b>, mert tudom, hogy most nem nagy a kassza. Nincs benne új rendszer, új weboldal, semmi technikai macera. Ha bármi tetszik belőle, dobj rá egy üzit, vagy találkozzunk egy kávéra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE 3 PROBLEMS ═══ -->
+<section class="problems">
+  <div class="problems-head">
+    <span class="eyebrow">Amit látok</span>
+    <h2>Három dolog, ami most <em>visszahúzza</em> a HILO-t.</h2>
+    <p class="lede">Egyik sem hiba — három apró döntés, ami minden gyors brand életében újragondolásra szorul. Mindhárom javítása olcsó.</p>
+
+    <div class="callout">
+      <div class="ic">★</div>
+      <div>
+        <h4>Atikám, ezt low-budgetben raktam össze.</h4>
+        <p>Egyetlen pénzbeli tétel az egész 30 napban: <b>~40.000 Ft (5 ingyen táska, amit influencereknek küldünk)</b>. A fotózást <b>te magad csinálod a telefonoddal</b> — te tudod a legjobban, milyen környezetben passzol a HILO (fesztivál, buli, kávézó, város). Lejjebb teljes útmutatót kapsz: mikor, hol, milyen kompozíciókkal. Pár órányi szabad délután elég. Profi fotózás később jöhet, ha bír a kassza.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-list">
+
+    <div class="problem">
+      <div class="num">01</div>
+      <div>
+        <h3>A „tornazsák" kategória <em>egy csapda</em>.</h3>
+        <p>Aki edzeni jár, nem ad ki 25 ezret tornazsákért. Aki 25 ezret ad ki táskáért, nem akar tornazsákot. <b>A HILO pont középen van — senki nem találja magát.</b></p>
+        <details>
+          <summary>Több részlet</summary>
+          <div class="more">
+            <p>Aki tényleg edzeni jár, az 5–10 ezer forintos Adidas drawstring-et vesz. Aki 25 ezer forintot költ táskára, az Furla-t, Coach-ot, Liu Jo-t vesz — nem tornazsákot. Az egyik közönségnek a HILO túl drága, a másiknak nem elég „divat-táska". Nem a termékkel van baj, csak senki nem találja magát a polcon.</p>
+          </div>
+        </details>
+      </div>
+      <div class="side">
+        <b>A megoldás</b>
+        Áthelyezni a pozíciót a „lifestyle / fesztivál / hétköznapi luxus" niche-be. Ugyanaz a termék, más név, más fotó, más vevő.
+        <em>Költség: pár óra szövegezés.</em>
+      </div>
+    </div>
+
+    <div class="problem">
+      <div class="num">02</div>
+      <div>
+        <h3>Négy kollekció, ötven darab, <em>egyetlen műhelyből</em>.</h3>
+        <p>A vevő nem tudja eldönteni, melyik az „övé" — és <b>választási bénultság</b> miatt egyikre sem kattint. Egy kis brandnek 4 kollekció túl sok.</p>
+        <details>
+          <summary>Több részlet</summary>
+          <div class="more">
+            <p>A Royal, Dr. Gold, Magic Art és We Are One mind kategóriák, és együtt egy ~12 ezres vevői bázis számára túl sok választás. Minden marketing-forintnak kis felületre kell hogy ható legyen — most négyre oszlik szét, ezért egyik sem ér el kritikus tömeget. Ha lecsökkented kettőre (egy fő + egy rotáló), a meglévő marketing-figyelmed 2× hatékonyabb.</p>
+          </div>
+        </details>
+      </div>
+      <div class="side">
+        <b>A megoldás</b>
+        Két kategóriára szűkíteni: egy „klasszikus, mindig kapható" (Royal) és egy „limitált, havi sorozat" (rotálva: Dr. Gold / Magic Art / kollabok).
+        <em>Költség: 0 Ft.</em>
+      </div>
+    </div>
+
+    <div class="problem">
+      <div class="num">03</div>
+      <div>
+        <h3>A webshop <em>nem mesél</em> történetet.</h3>
+        <p>Üres fekete hero, SEO-spam terméknevek („ROYAL — Gym Bag — Unique — Luxury — Premium — Elegant…"). <b>A HILO-nak van története, csak nincs sehol elmondva.</b></p>
+        <details>
+          <summary>Több részlet</summary>
+          <div class="more">
+            <p>Aki most beesik a HILO-oldalra, nem érti, miben más, mint bármi más. A terméknevek a Google-nek készülnek, nem a vásárlónak. Pedig a HILO-nak már megvan a sztorija: Budapest, 2018, pearl canvas, kézzel hímzett ananász, kis műhely. Egy editorial homepage, ami a műhelyt és a kézi-készítést középre teszi, ezt rendbe rakja.</p>
+          </div>
+        </details>
+      </div>
+      <div class="side">
+        <b>A megoldás</b>
+        Új heroszöveg, új termékneveket (1-2 sor / termék), 1 délutáni fotózás iPhone-nal a műhelyben — vagy fotós baráttal.
+        <em>Költség: 0 Ft (ismerőssel) — vagy ~50.000 Ft, ha bír a kassza.</em>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ BIG NUMBER ═══ -->
+<section class="bignum">
+  <span>De a legnagyobb lehetőség…</span>
+  <h2>nem a webshopon <em>van</em>.</h2>
+  <p>Az igazi pénz egy olyan vevőtípusnál ül, akiről most a HILO szinte tudomást sem vesz. Erről szól a következő oldal.</p>
+</section>
+
+<!-- ═══ 3 MOVES ═══ -->
+<section class="moves">
+  <div class="moves-head">
+    <div>
+      <span class="eyebrow">Három lépés</span>
+      <h2>Mit lehet most <em>tenni.</em></h2>
+    </div>
+    <div class="note">Sorrendben — fentről lefelé.<br>A legnagyobb hatás <b>az első</b>.</div>
+  </div>
+
+  <!-- MOVE 1 -->
+  <div class="move priority">
+    <div class="move-left">
+      <span class="move-tag">⭐ Első számú lépés</span>
+      <h3>Céges <em>ajándékpiac.</em></h3>
+      <p class="lead">A magyar prémium táska tökéletes karácsonyi cégajándék — és erre most senki sem szólítja meg a cégeket.</p>
+      <div class="move-cost">
+        <span><b>0 Ft</b> · ez ingyen van</span>
+        <span><b>Heti ~10 óra</b> · a te munkád</span>
+        <span><b>3–6 hét</b> · első rendelésig</span>
+      </div>
+      <div class="priority-stamp">Itt van<br>a legtöbb<br>pénz</div>
+    </div>
+    <div class="move-right">
+      <p><b>A logika egyszerű.</b> Magyar tech-cégek, hotelek, ügynökségek évente egyszer keresnek prémium céges ajándékot. Egy kézzel készült, monogrammal gravírozott HILO táska pont ebbe a kategóriába esik — versenyképes a whisky-szettel, a Tchibo plüsstakaróval.</p>
+      <p style="font-size:18px;color:var(--ink)"><b>100 db rendelés = 1,5 millió Ft. 500 db = 7,5 millió Ft. 3–5 ilyen szerződés évente reális</b> — egy embertől, aki rendszeresen hív cégeket.</p>
+      <div class="move-projection">
+        <div><small>1 cég rendel 100 db-ot</small><b>1,5 <em>M Ft</em></b></div>
+        <div><small>3 cég / fél év</small><b>7–15 <em>M Ft</em></b></div>
+        <div><small>1 év, óvatosan</small><b>15–30 <em>M Ft</em></b></div>
+      </div>
+      <details>
+        <summary>Hogyan csináljuk — részletesen</summary>
+        <div class="more">
+          <ul>
+            <li><b>1-pager PDF</b> a HILO-ról: csomag-méretek (50 / 100 / 250 / 500 db), monogram, lead time, ár — ezt én megcsinálom</li>
+            <li><b>50 LinkedIn-üzenet</b> magyar tech / hotel / agency / pénzügyi cégeknek (HR vezető / marketing / brand manager titulusra szűrve) — sablon én készítem, te küldöd ki</li>
+            <li><b>Válaszadóknak rövid telefon</b> — Te hívod fel, 15 perc, elmondod a csomagot, megküldöd az 1-pager-t</li>
+            <li><b>Komoly érdeklődő → szerződés</b> — kifizetés előlegen 50%, szállítás 4–6 hét múlva</li>
+          </ul>
+          <div class="example">
+            <b>Konkrét célpontok</b>
+            Wolt HU, Bitrise, IND Group, KPMG, OTP Mobil, Continental, Codecool, Loffice — minden 50+ fős magyar tech / agency / pénzügyi cég. Hotelek: Aria, Brody House, Mystery, Várkert Bazár. Konferenciák: Brain Bar, Pioneers, Crafted CEE.
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- MOVE 2 -->
+  <div class="move">
+    <div class="move-left">
+      <span class="move-tag">Második lépés</span>
+      <h3>Másképp mutasd <em>ugyanazt a táskát.</em></h3>
+      <p class="lead">A „tornazsák" szó kikerül. Helyette: fesztiválos darab, hétköznapi lux, művészi drawstring.</p>
+      <div class="move-cost">
+        <span><b>0 Ft</b> · fotós baráttal</span>
+        <span><b>~6 óra</b> · szövegeket átírni</span>
+        <span><b>1 hét</b> · míg élesedik</span>
+      </div>
+    </div>
+    <div class="move-right">
+      <p><b>Ugyanaz a táska, más közönség.</b> A 18–35 éves fesztiválozó nő + a 25–40 éves vidéki értelmiségi (aki magyar kézművességet keres) együtt <b>3–5× nagyobb piac</b>, mint a tornazsákot kereső férfi.</p>
+      <p style="font-size:18px;color:var(--ink)"><b>Ehhez nem kell új termék</b> — csak más fotók (utcán, fényben, nem fekete stúdió-háttér előtt) és új termékneveket az SEO-spam helyett.</p>
+      <div class="move-projection">
+        <div><small>Vásárlóból több lesz</small><b>+30 <em>%</em></b></div>
+        <div><small>Visszajárnak az oldalra</small><b>+50 <em>%</em></b></div>
+        <div><small>Több Insta-megosztás</small><b>3–5 <em>×</em></b></div>
+      </div>
+      <details>
+        <summary>Példa + hogyan oldjuk meg low-budgetben</summary>
+        <div class="more">
+          <div class="example">
+            <b>Példa: a meglévő terméknév helyett</b>
+            Most: „ROYAL — Gym Bag — Unique — Luxury — Premium Drawstring — Elegant — Paracord — Premium — Fashionable — Sporty — Chic — Quality — Exclusive"<br><br>
+            Helyette: <em>„Champagne Twilight · Royal No. 03"</em> — két szín, egy név, egy szám. Mintha ékszer lenne.
+          </div>
+          <ul>
+            <li><b>Fotózás low-budgetben:</b> 1 délután, fotós barát + 1 baráti modell (barteren — kap egy táskát). Helyszín: utca, kávézó, hazai táj. Ha nincs fotós ismerősöd, iPhone-nal jó fényben 1 órányi anyag is messze jobb a meglévőnél.</li>
+            <li><b>Szöveg:</b> kollekciónként 3-4 sornyi „mood" leírás. Ezt én megírom neked, csak átküldöd a Shopify-ba.</li>
+            <li><b>Hero videó:</b> 15 másodperc telefonnal — varrógép, kézzel hímzett ananász, aranyfólia. Editing: ingyen CapCut-tal.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- MOVE 3 -->
+  <div class="move">
+    <div class="move-left">
+      <span class="move-tag">Harmadik lépés</span>
+      <h3>Limitált sorozatok <em>előrendeléssel.</em></h3>
+      <p class="lead">Soha többet ne maradjon polcon eladhatatlan táska. 6 hetente egy új limitált sorozat, és a vevő előre fizet.</p>
+      <div class="move-cost">
+        <span><b>0 Ft</b> · ingyen van</span>
+        <span><b>Más munkamenet</b> · nem új rendszer</span>
+        <span><b>Folyamatos</b> · pénz a számlán</span>
+      </div>
+    </div>
+    <div class="move-right">
+      <p><b>Most:</b> előre megvarrtok 20–50 táskát, és vártok, hogy elfogyjon. Pénz áll a polcon, nincs sürgető vásárlási ok.</p>
+      <p style="font-size:18px;color:var(--ink)"><b>Helyette:</b> 6 hetente meghirdettek 50 darabos limitált sorozatot, ami csak 7 napig kapható. <b>A vevő előre fizet</b>, csak utána varrjátok meg. (Ahogy a Supreme dolgozik.)</p>
+      <div class="move-projection">
+        <div><small>Eladhatatlan készlet</small><b>0 <em>Ft</em></b></div>
+        <div><small>Sorozat évente</small><b>8 <em>db</em></b></div>
+        <div><small>Bevétel ebből / év</small><b>~12 <em>M Ft</em></b></div>
+      </div>
+      <details>
+        <summary>Egy „drop" hogy néz ki</summary>
+        <div class="more">
+          <div class="example">
+            <b>7 napos kommunikáció</b>
+            Kedd reggel (–7 nap): teaser Instagramon — egy részlet a varrásból<br>
+            Csütörtök (–5 nap): a kollab partner bemutatása (művész / fotós / DJ)<br>
+            Hétfő (–0 nap): meghirdetés, 7 napos előrendelés, countdown a weboldalon<br>
+            +14 nap: szállítás postai csomaggal, kézzel írt köszönőkártya
+          </div>
+          <ul>
+            <li><b>Pénz a számlán:</b> az előrefizetésből veszitek az alapanyagot — nincs hitel</li>
+            <li><b>Skálázhatóság:</b> ha 50 helyett 200-at ad el, csak több varrási óra kell — nem új gép</li>
+            <li><b>Hype-loop:</b> minden sorozat fotó- és videó-anyagot termel a következő teaserhez</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FESZTIVÁLSZEZON STRATÉGIA ═══ -->
+<section class="fest">
+  <div class="fest-head">
+    <span class="eyebrow">⚡ Atikám, ez a tiéd — pont a te szcénád</span>
+    <h2>Fesztiválszezon-stratégia <em>— most kell lépni.</em></h2>
+    <p>Te magad mész DAAD-ra, jársz goa-techno bulikba, van DJ ismeretségi köröd. <b>A Magic Art kollekció pont nekik készült</b> — UV, mandala, psychedelic. A HILO eddig nem használta ki ezt a természetes közönséget. <b>3–4 hét múlva DAAD, augusztusban Ozora és Sziget</b> — a 2026-os ablak most nyílik. Ha most lépsz, a teljes szezont kihasználod. Ha 6 hét múlva, kimaradsz.</p>
+  </div>
+
+  <div class="fest-timeline">
+    <div class="fest-week now">
+      <div class="dot"></div>
+      <h4>MOST</h4>
+      <span class="when">2026.05. közepe</span>
+      <span class="act">DJ-lista, 10 ingyen táska varrása, DAAD-os tartalom-terv</span>
+    </div>
+    <div class="fest-week">
+      <div class="dot"></div>
+      <h4>DAAD</h4>
+      <span class="when">2026.06. eleje</span>
+      <span class="act">Helyszíni fotó-anyag + 30-darabos limitált sorozat</span>
+    </div>
+    <div class="fest-week">
+      <div class="dot"></div>
+      <h4>VOLT + Balaton Sound</h4>
+      <span class="when">2026.06–07.</span>
+      <span class="act">Magic Art kollekció pushja, DJ-knél láthatóság</span>
+    </div>
+    <div class="fest-week">
+      <div class="dot"></div>
+      <h4>OZORA + SZIGET</h4>
+      <span class="when">2026.08.</span>
+      <span class="act">A felépített momentum csúcsa — itt jön a legnagyobb bevétel</span>
+    </div>
+    <div class="fest-week">
+      <div class="dot"></div>
+      <h4>SZEZON UTÁN</h4>
+      <span class="when">2026.09.</span>
+      <span class="act">Klub-only drop a fesztiválozóknak, akik már a klubodban vannak</span>
+    </div>
+  </div>
+
+  <div class="fest-actions">
+
+    <div class="fa">
+      <span class="tag">Walking billboards</span>
+      <h4>5–10 ingyen táska psy/goa DJ-knek</h4>
+      <p>Választasz 5–10 magyar (vagy környékbeli) psy/goa/techno DJ-t a köreidből — Magic Art kollekció táskát kapnak ajándékba. <b>Ha hordják DAAD-on, Ozorán, a klubokban, a követőjük látja</b>, és 30%-os partner-kódot adsz nekik.</p>
+      <div class="meta"><span>~40–80k Ft anyagár</span><span>5–10× elérés</span><span>2 hét lead time</span></div>
+    </div>
+
+    <div class="fa">
+      <span class="tag">0 költség · max reach</span>
+      <h4>DAAD-on saját fotó-anyag</h4>
+      <p>Úgyis mész. Vigyél magaddal <b>5–10 táskát</b>, add rá barátokra, fotózd a táncparketten, a sátortáborban, a hajnalban. <b>Egy hétvégének elég Insta + webshop hero tartalom van</b> — és autentikus, mert tényleg ott készült.</p>
+      <div class="meta"><span>0 Ft költés</span><span>~50 fotó / videó</span><span>egész nyári content</span></div>
+    </div>
+
+    <div class="fa">
+      <span class="tag">Scarcity + sztori</span>
+      <h4>„DAAD 2026 Edition" limitált sorozat</h4>
+      <p>30 darabos limitált sorozat, <b>kifejezetten DAAD-ra címezve</b>. Vagy UV-festéssel, vagy a fesztiválhoz hangolt mintával. Csak a fesztivál hetében kapható. Ha kapcsolatod van a szervezőkkel, közös bejelentés.</p>
+      <div class="meta"><span>30 db × 14.990</span><span>~450k Ft bevétel</span><span>3 hét lead time</span></div>
+    </div>
+
+    <div class="fa">
+      <span class="tag">Lehetőség-térkép</span>
+      <h4>Stand vagy collab a fesztiválon</h4>
+      <p>Ha van DAAD/Ozora/Sziget kapcsolatod (Ati, gondolom van), <b>kérdezz rá stand-lehetőségre vagy crew-collab-ra</b>: VIP gift, after-party ajándék, vagy egy közös „festival capsule". A stand önmagában fizetős, a crew-collab gyakran csere.</p>
+      <div class="meta"><span>Stand: 50–200k / hv</span><span>Crew-collab: 0 Ft</span><span>Megnyitja az ajtót</span></div>
+    </div>
+
+    <div class="fa">
+      <span class="tag">A saját szcénád</span>
+      <h4>Goa-techno klub-terjesztés</h4>
+      <p><b>Akvárium, Lärm, Toldi, Telep, Doboz, A38</b> — bárhol, ahol psy/goa estek vannak. Adsz 2–3 táskát a klubmanagernek vagy a brand-ambasszádornak. <b>Nyári hónapokban látható a klubban</b>, organikus ajánlás megy.</p>
+      <div class="meta"><span>~25k Ft anyag</span><span>4–6 klub</span><span>3 hónap láthatóság</span></div>
+    </div>
+
+    <div class="fa">
+      <span class="tag">Webshop reframe</span>
+      <h4>„Festival Series 2026" élesítése</h4>
+      <p>A meglévő Magic Art kollekciót <b>átnevezed „Festival Series 2026"-ra</b>, frissíted a copyt fesztivál-vibe-ra, és a hero videó DAAD-os anyaggal megy. Ugyanaz a termék, más csomagolás. <b>A Magic Art lesz a #1 nyári bestseller.</b></p>
+      <div class="meta"><span>0 Ft költés</span><span>~6 óra munka</span><span>egész szezonra szól</span></div>
+    </div>
+
+  </div>
+
+  <div class="fest-urgency">
+    <div class="ic">!</div>
+    <div>
+      <h4>Atikám — ezt nem lehet jövőre kezdeni</h4>
+      <p>Pár hét van DAAD-ig. <b>Most kell összeállítani a DJ-listát és elindítani a 10 ingyen táska varrását</b> (lead time 2 hét). Ha most lépsz: a teljes 2026-os szezont kihasználjuk — DAAD + Volt + Ozora + Sziget. <b>Ha 3 hét múlva lépünk: csak az Ozora/Sziget hullámot kapjuk el. Ha 6 hét múlva: kimaradunk az egész 2026-os szezonból.</b> A goa-techno közönség szezonja 4 hónap — a HILO meg pontosan rájuk van varrva.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXCHANGE: TIME → MONEY ═══ -->
+<section class="exchange">
+  <div class="exchange-head">
+    <span class="eyebrow">Mit teszel be → mit kapsz vissza</span>
+    <h2>Ennyi a <em>csere.</em></h2>
+    <p class="lede">A legkönnyebb úgy gondolkodni rajta, mint egy csereüzleten. Te beteszel egy nap fotózást — visszakapsz +30% vásárlót. Beteszel 8 óra emaileket — visszakapsz egy 1,5 milliós cégrendelést. Itt van az egész 30 nap egyetlen táblában.</p>
+  </div>
+
+  <div class="exrow">
+    <div class="a"><small>Beteszel</small>8 óra · összeállítasz 50 HR-vezetőt LinkedIn-ről</div>
+    <div class="arr">→</div>
+    <div class="b"><small>Visszakapsz</small><strong>2–3 érdeklődő</strong> · ami az első céges rendelés felé visz</div>
+  </div>
+
+  <div class="exrow">
+    <div class="a"><small>Beteszel</small>3 perc / email × 50 = ~2,5 óra üzenetküldés</div>
+    <div class="arr">→</div>
+    <div class="b"><small>Visszakapsz</small><strong>5–10 válasz</strong> · 1–2 komoly tárgyalás 6 héten belül</div>
+  </div>
+
+  <div class="exrow">
+    <div class="a"><small>Beteszel</small>1 telefonos beszélgetés egy HR-vezetővel</div>
+    <div class="arr">→</div>
+    <div class="b"><small>Visszakapsz</small><strong>1,5 millió Ft</strong> · ha 100 db karácsonyi céges ajándékot rendel</div>
+  </div>
+
+  <div class="exrow">
+    <div class="a"><small>Beteszel</small>1 szabad délután fotózás telefonnal (az útmutató szerint)</div>
+    <div class="arr">→</div>
+    <div class="b"><small>Visszakapsz</small><strong>+30% vásárló</strong> · a webshopon, tartósan</div>
+  </div>
+
+  <div class="exrow">
+    <div class="a"><small>Beteszel</small>6 óra szöveget átírni a meglévő termékneveken</div>
+    <div class="arr">→</div>
+    <div class="b"><small>Visszakapsz</small><strong>Természetes oldal</strong> · ahol az ember érti, mit vesz</div>
+  </div>
+
+  <div class="exrow">
+    <div class="a"><small>Beteszel</small>3 óra · 1 limitált sorozat bejelentése Instán + weboldalon</div>
+    <div class="arr">→</div>
+    <div class="b"><small>Visszakapsz</small><strong>~600.000 Ft</strong> · 7 nap alatt, 50 darab előrendeléssel</div>
+  </div>
+
+  <div class="exrow">
+    <div class="a"><small>Beteszel</small>5 micro-influencer kiválasztása + 5 ingyen táska (~40.000 Ft)</div>
+    <div class="arr">→</div>
+    <div class="b"><small>Visszakapsz</small><strong>3–5 viral poszt</strong> · ami 6 hónapig hajt vásárlókat</div>
+  </div>
+</section>
+
+<!-- ═══ DIRECT OUTREACH — concrete next steps ═══ -->
+<section class="outreach">
+  <div class="outreach-head">
+    <span class="eyebrow">Mit csinálsz holnap reggel</span>
+    <h2>Közvetlen megkeresés — <em>négy lépésben.</em></h2>
+    <p class="lede">Itt nincs semmi titok. Holnap reggel kávé mellett megcsinálod ezt a négy dolgot, és az első cégrendelésig 3–6 hét van. Az alábbi üzenetet kimásolod, behelyettesíted a [neveket], és elküldöd 50 embernek a LinkedIn-en. Egy lefutás kb. 2,5 óra.</p>
+  </div>
+
+  <div class="outreach-grid">
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <div>
+          <h4>Készíts egy listát 50 emberről a LinkedIn-en</h4>
+          <p>Magyar tech cégek + hotelek + ügynökségek HR / marketing / brand manager titulusú vezetőinek nevét írod egy sima excelbe. Cég, név, link a LinkedIn-profilra. Ennyi.</p>
+          <span class="time">~2 óra</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="n">2</div>
+        <div>
+          <h4>Másold ki a jobb oldali üzenetet</h4>
+          <p>Egy üzenet, minden embernek ugyanaz, csak a nevet és a céget cseréled. 3 perc / üzenet, mert csak a [Név] és a [Cégnév] részeket kell áttölteni.</p>
+          <span class="time">~2,5 óra (50 db)</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="n">3</div>
+        <div>
+          <h4>Aki válaszol, fel kell hívnod telefonon</h4>
+          <p>Várhatóan 5–10 ember fog visszaírni. Akik komolyak (2–3 ember), azokat felhívod, 15 perces beszélgetés, elmondod, milyen csomagjaink vannak (50 / 100 / 250 / 500 db, monogram-opció, lead time).</p>
+          <span class="time">~30 perc / hívás</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="n">4</div>
+        <div>
+          <h4>A komolyaknak küldjük el az 1-pager PDF-et</h4>
+          <p>Ezt én megcsinálom — egy szép, 1 oldalas PDF-et a HILO-ról, csomag-méretekkel, árakkal, monogram-példával. Ezt küldöd át a hívás után az érdeklődőknek.</p>
+          <span class="time">Ezt én csinálom</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="template">
+      <span class="ribbon">Másold ki — ez megy 50 embernek</span>
+      <h4>LinkedIn-üzenet sablon</h4>
+      <span class="sub">→ csak a [Név] és [Cégnév] cserélődik</span>
+      <pre id="tpl">Szia [Név]!
+
+Láttam, hogy a [Cégnév]-nél te foglalkozol a céges ajándékokkal / brand-kommunikációval. Egy gyors gondolat.
+
+Magyar kézzel készült prémium táskákat csinálunk Budapesten — hilobags.com. Most karácsonyi szezonra építünk egy B2B csomagot 50–500 darabos rendelésekre, monogram lézergravírozással.
+
+3–4 olyan cégnek küldjük el az ajánlatot, ahol szerintünk passzol. Ha érdekes lehet nálatok, dobok egy 1 oldalas összefoglalót — vagy felhívlak 10 percre.
+
+Nyári hónapokban van időnk a varrásra, karácsonyi átadáshoz most kell betervezni.
+
+Köszi,
+Ati · HILO Bags</pre>
+      <button class="copy" onclick="copyTpl(this)">Másolás vágólapra</button>
+    </div>
+  </div>
+
+  <div class="targets">
+    <h4>Akiket holnap fel lehet keresni (mintalista)</h4>
+    <div class="grid">
+      <a href="#">Wolt HU<small>HR vezető</small></a>
+      <a href="#">Bitrise<small>People ops</small></a>
+      <a href="#">IND Group<small>Marketing</small></a>
+      <a href="#">KPMG HU<small>Brand manager</small></a>
+      <a href="#">OTP Mobil<small>HR</small></a>
+      <a href="#">Brody House<small>Hospitality</small></a>
+      <a href="#">Aria Hotel<small>F&B / Gift</small></a>
+      <a href="#">Mystery Hotel<small>Concierge</small></a>
+      <a href="#">Brain Bar<small>Konf. csomag</small></a>
+      <a href="#">Loffice<small>Members gift</small></a>
+    </div>
+    <em>Ezen a 10-en kezdj — utána már látni fogod a mintát, és könnyű lesz keresni hozzá hasonlót. Listát én is bővítek, ha kéred.</em>
+  </div>
+</section>
+
+<!-- ═══ SHOOT GUIDE ═══ -->
+<section class="shoot">
+  <div class="shoot-head">
+    <span class="eyebrow">Fotózási útmutató</span>
+    <h2>Hogyan fotózz — <em>Atikám, hozzád szólok.</em></h2>
+    <p class="lede">Te tudod a legjobban, milyen környezetben passzol a HILO. Itt összeszedtem, <b>mikor, hol és milyen kompozícióval fotózz</b> — ez egyfajta puska, hogy ne kelljen találgatnod. Egy szabad délután + telefon + valaki, aki hordja → már messze jobb anyagod van, mint a meglévő.</p>
+  </div>
+
+  <!-- MIKOR -->
+  <div class="shoot-section">
+    <div class="shoot-section-head">
+      <span class="step-n">01</span>
+      <h3>Mikor fotózz — <em>a fény mindennél fontosabb.</em></h3>
+      <p class="hint">Soha délben.<br>Mindig oldalra ferde fénynél.</p>
+    </div>
+    <div class="shoot-list">
+      <div class="s-row"><div class="n">☀</div><div><h4>Reggeli golden hour</h4><p>Napkelte utáni 1 óra — meleg, oldalról jövő fény. A táska aranya itt él. Kávézó kintere, utcakép, vasárnap reggel kihalt belváros.</p><em>kb. 6–7h nyáron · 7–8h télen</em></div></div>
+      <div class="s-row"><div class="n">☀</div><div><h4>Esti golden hour</h4><p>Naplemente előtti 1 óra — a legjobb fény az egész napban. Műhely-portré, fesztiválos hangulat, vízközeli helyek (Duna-part, Balaton).</p><em>kb. 18–19h nyáron · 16–17h télen</em></div></div>
+      <div class="s-row"><div class="n">◐</div><div><h4>Kék óra</h4><p>Naplemente utáni 20 perc — minden mély-kék, és a városi fények kigyulladnak. Romkocsma, ablakos kávézó, város éjjel. Buli-vibe.</p><em>kb. 19:30–20h nyáron</em></div></div>
+      <div class="s-row"><div class="n">⛅</div><div><h4>Felhős, szétszórt napfény</h4><p>Egész nap egyenletes, lágy fény — semmi árnyék. Ideális modellfotózásra, mert a bőr nem világítódik túl. Tökéletes esős őszi nap.</p><em>egész nap</em></div></div>
+      <div class="s-row"><div class="n">✦</div><div><h4>Fesztivál / koncert fény</h4><p>UV, neon, színes spot — a Magic Art és We Are One kollekciók itt jönnek elő. Sziget, Ozora, romkocsma, klub. Mozgásban fotózd a táskát.</p><em>esték, éjszakák</em></div></div>
+      <div class="s-row"><div class="n">⌂</div><div><h4>Műhely ablakfény</h4><p>Délelőtt 9–11h egy nagy ablak mellett — diffúz, hideg-meleg keverékfény. Kéz, anyag, varrógép, részlet-fotók. Ez a „behind-the-scenes" tartalom.</p><em>kb. 9–11h</em></div></div>
+    </div>
+  </div>
+
+  <!-- HOL -->
+  <div class="shoot-section">
+    <div class="shoot-section-head">
+      <span class="step-n">02</span>
+      <h3>Hol fotózz — <em>oda, ahol valaki tényleg viseli.</em></h3>
+      <p class="hint">Fekete stúdió-háttér<br>SOHA TÖBBET.</p>
+    </div>
+    <div class="shoot-grid">
+      <div class="s-card">
+        <span class="ic">✦</span>
+        <span class="tag">Fesztivál — a TE szcénád</span>
+        <h4>DAAD · Ozora · Sziget · Volt · Balaton Sound</h4>
+        <p>UV-fény, mandala-light, hajnali tánc, sátortábor. A táskát viseld te, vagy az ismerőseid — <b>autentikus HILO-kép, amit más nem tud előállítani</b>. A Magic Art kollekció pont ide való.</p>
+      </div>
+      <div class="s-card">
+        <span class="ic">♬</span>
+        <span class="tag">Goa / psy klub-este</span>
+        <h4>Akvárium · Lärm · Toldi · Doboz · A38</h4>
+        <p>Színes fény, UV, blur, mozgás. Az aranyfólia + mandala-szín a sötétben gyönyörűen csillan. <b>Pénteki goa-est = HILO-uniform</b> — ott van az egész célközönséged egy helyen.</p>
+      </div>
+      <div class="s-card">
+        <span class="ic">☕</span>
+        <span class="tag">Belvárosi kávézó</span>
+        <h4>Brody · Mantra · Wood · Telep · Madal</h4>
+        <p>Délelőtti kávé, könyv, jegyzetfüzet a táska mellett. A „hétköznapi luxus" pozíciónak ez az ágya.</p>
+      </div>
+      <div class="s-card">
+        <span class="ic">⌂</span>
+        <span class="tag">A saját műhelyed</span>
+        <h4>Behind-the-scenes</h4>
+        <p>Varrógép, kéz, pearl canvas, paracord-tekercsek, kávé. Ez a brand-mag — ezt SENKI más nem tudja lefotózni rajtad kívül.</p>
+      </div>
+      <div class="s-card">
+        <span class="ic">▣</span>
+        <span class="tag">Magyar architektúra</span>
+        <h4>Budai Vár · Halászbástya · Várkert · Mátyás-templom</h4>
+        <p>Sárga kőfal + arany táska = bőven a Vogue-ban van rá kérdés. Egy turistamentes reggeli órában.</p>
+      </div>
+      <div class="s-card">
+        <span class="ic">≋</span>
+        <span class="tag">Víz / természet</span>
+        <h4>Margitsziget · Balaton · Duna-part</h4>
+        <p>Nyári naplemente, modellként valaki vízhez közel sétál. A Royal kollekció pasztelljeinek tökéletes háttér.</p>
+      </div>
+      <div class="s-card">
+        <span class="ic">⛰</span>
+        <span class="tag">Vidéki magyar táj</span>
+        <h4>Tihany · Hollókő · Eger · Pannonhalma</h4>
+        <p>Magyar kézművesség + magyar táj. Az „erre büszke vagyok" narratívához. Hétvégi kiruccanáson.</p>
+      </div>
+      <div class="s-card">
+        <span class="ic">✚</span>
+        <span class="tag">Művészeti / galéria</span>
+        <h4>Trafó · Kis Présház · Ludwig · MűPa</h4>
+        <p>Modern fal, neon-fény, művészeti tér. A We Are One kollekció pontosan ide való.</p>
+      </div>
+      <div class="s-card">
+        <span class="ic">★</span>
+        <span class="tag">Ahogy te elképzeled</span>
+        <h4>Bárhol, ahol szerinted jól áll</h4>
+        <p>Tényleg. Atikám, te tudod a legjobban — ha látsz egy falat, egy fényt, egy hangulatot az utcán, kapd elő a telefont. Ez a legjobb HILO-szem.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MIT FOTÓZZ -->
+  <div class="shoot-section">
+    <div class="shoot-section-head">
+      <span class="step-n">03</span>
+      <h3>Milyen kompozíciókat <em>keress.</em></h3>
+      <p class="hint">Egy lefotózott napon<br>mindből 2-3 legyen.</p>
+    </div>
+    <div class="shoot-list">
+      <div class="s-row"><div class="n">1</div><div><h4>Lifestyle on-body</h4><p>Modell (barát, ismerős) viseli a táskát, séta közben, mozgásban. Nem pózolva — járás közben kapd el.</p><em>fő anyag a webshopra · 8–10 db</em></div></div>
+      <div class="s-row"><div class="n">2</div><div><h4>Quiet object</h4><p>A táska egyedül, kontextusban — egy padon, egy kőfalon, egy bárasztalon. Művészi, magazinos.</p><em>katalógus-fő kép · 4–6 db</em></div></div>
+      <div class="s-row"><div class="n">3</div><div><h4>Részlet — gold-foil close-up</h4><p>Az ananász embléma, a paracord-csomó, az aranyfólia hímzés. Telefont közel, kis mélységélességgel.</p><em>termékoldal galéria · 6–8 db</em></div></div>
+      <div class="s-row"><div class="n">4</div><div><h4>Kéz + anyag</h4><p>A te kezed a táska anyagán, a varrógépen, a pearl canvas-en. „Itt készült" érzet.</p><em>about / story oldal · 3–4 db</em></div></div>
+      <div class="s-row"><div class="n">5</div><div><h4>Élmény-kontextus</h4><p>Táska + egy másik tárgy: kávé, könyv, koncert-jegy, naplemente. Az „életstílus" csomag.</p><em>Instagram, kollekciós header · 5–7 db</em></div></div>
+      <div class="s-row"><div class="n">6</div><div><h4>Mozgás-blur</h4><p>Forgás, futás, lépés — a táska kicsit elmosódik. Az „aktív vagyok" üzenet. Slow shutter telefonon.</p><em>hero videóhoz · 2–3 db</em></div></div>
+    </div>
+  </div>
+
+  <!-- DOs / DON'Ts -->
+  <div class="shoot-section">
+    <div class="shoot-section-head">
+      <span class="step-n">04</span>
+      <h3>Mit csinálj — <em>és mit ne.</em></h3>
+      <p class="hint">A jobb oszlop<br>fontosabb a balnál.</p>
+    </div>
+    <div class="shoot-do">
+      <div class="yes">
+        <h5>Csináld ezt</h5>
+        <ul>
+          <li>Telefonod tiszta lencséjével fotózz (törölgesd meg)</li>
+          <li>Mindig oldalfényt használj, soha szembefényt vagy felülről</li>
+          <li>Modellt mozgásban kapj el, ne álló pózban</li>
+          <li>Pixel-szinten éles legyen az ananász embléma</li>
+          <li>Háttér: meleg, magyar érzet (kőfal, fa, virág, kávé)</li>
+          <li>Vízszintes ÉS függőleges verzió is legyen mindenből</li>
+          <li>RAW / ProRAW módban, ha tudod (iPhone Pro / Samsung)</li>
+          <li>Egy alkalommal 30–80 fotó — sok, hogy legyen miből válogatni</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h5>Soha többet ne</h5>
+        <ul>
+          <li>Fekete stúdió-háttér előtt fotózz (ez a régi probléma)</li>
+          <li>Délben, kemény napsütésben (csúnya árnyék)</li>
+          <li>Flash-t használj — soha</li>
+          <li>Beauty-szűrőt vagy Instagram-presetet ráreszelj</li>
+          <li>Csak terméket fotózz, ember nélkül (a brand emberekről szól)</li>
+          <li>Több táskát egyszerre — egy fotó, egy darab</li>
+          <li>Túl-szerkesztett, mű-magazin-os retus (rontja a kézi-érzetet)</li>
+          <li>Aspect-ratio fix nélkül (mindig tartsd ugyanazt a méretet)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="checklist">
+    <span class="sub">→ ez egy „zsebcetli", amit elő tudsz venni a helyszínen</span>
+    <h4>Egy fotózási nap puska</h4>
+    <ol>
+      <li><b>Időzítés:</b> <i>17:30-tól 19:00-ig</i> · golden hour, oldalfény, nyári este</li>
+      <li><b>Modell:</b> 1 barát / ismerős, aki épp arrafelé van — kap egy táskát cserébe</li>
+      <li><b>Helyszín:</b> 2 lokáció, max 15 perc séta egymástól (pl. <i>Brody → Várkert</i>)</li>
+      <li><b>Eszköz:</b> <i>tiszta lencse + telefon + 1 papírvászon a háttérhez ha kell + 1 üveg víz</i></li>
+      <li><b>Fotó-mix:</b> 8× on-body séta + 5× részlet + 4× quiet object + 3× kontextus</li>
+      <li><b>Variáció:</b> minden kompozíció vízszintes + függőleges</li>
+      <li><b>Idő:</b> kb. <i>1,5–2 óra</i>, 60–80 fotó, melyből 15–20 használható lesz</li>
+      <li><b>Utómunka:</b> Lightroom Mobile (ingyen), 1 saját preset („HILO golden") — ezt én előállítom neked, csak alkalmazod</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══ 30 DAY PLAN ═══ -->
+<section>
+  <div class="plan-head">
+    <span class="eyebrow">A 30 napos terv</span>
+    <h2>Hétről hétre. <em>Konkrétan.</em></h2>
+    <p class="lede">Az alábbi naptár pontosan azt mutatja, mi történne, ha holnap nekikezdesz. Egyik héten sem kell teljes munkaidőben rajta tolni — heti 10–12 óra elég.</p>
+  </div>
+
+  <div class="plan">
+    <div class="plan-row head">
+      <span class="plan-week">Hét</span>
+      <span>Fókusz</span>
+      <span>Mit csinálunk</span>
+      <span style="text-align:right">Költség / cél</span>
+    </div>
+
+    <div class="plan-row">
+      <div class="plan-week">01</div>
+      <div class="plan-title">Cégajándék-pitch + DJ-lista — két szálon indulunk</div>
+      <div class="plan-detail">B2B: 1 oldalas PDF (csomag-méretek, monogram, ár, határidő) + LinkedIn-lista 50 magyar HR-eshez. <b>Fesztivál: DJ-lista 5–10 psy/goa/techno névvel a köreidből</b>, akiknek a Magic Art kollekcióból küldünk. <b>10 ingyen táska varrásának indítása — DAAD-ra 2 hét lead time.</b></div>
+      <div class="plan-cost"><b>0 Ft</b>~12 munkaóra</div>
+    </div>
+
+    <div class="plan-row">
+      <div class="plan-week">02</div>
+      <div class="plan-title">LinkedIn-üzenetek + DJ-knek táska kiküldése</div>
+      <div class="plan-detail">50 LinkedIn-üzenet kiküldése a HR-eseknek (~2,5 óra). <b>+ 5–10 ingyen táska postázása a kiválasztott DJ-knek</b> (saját üzenet + 30%-os partner-kód), hogy a DAAD-DAAD utáni 2 hónapban hordják.</div>
+      <div class="plan-cost"><b>~25k Ft</b>~5 munkaóra + posta</div>
+    </div>
+
+    <div class="plan-row">
+      <div class="plan-week">02</div>
+      <div class="plan-title">Fotózási délután a saját telefonoddal</div>
+      <div class="plan-detail">Az útmutató szerint: 1 baráti modell (kap egy táskát), 2 helyszín, 1,5–2 óra golden hour, 60–80 fotó. Cél: ~20 használható kép a webshopra és Instagramra. Te csinálod, a saját kontextusodban.</div>
+      <div class="plan-cost"><b>0 Ft</b>~2 óra</div>
+    </div>
+
+    <div class="plan-row">
+      <div class="plan-week">03</div>
+      <div class="plan-title">Webshop új szövegek + Magic Art → „Festival Series 2026" reframe</div>
+      <div class="plan-detail">SEO-keyword termékneveket emberi nevekkel cseréljük. <b>A Magic Art kollekció átnevezve „Festival Series 2026"-ra</b>, új copy fesztivál-vibe-ra. Új saját fotók (DAAD előtt készültek) feltöltése. Új „Történet" oldal a műhellyel.</div>
+      <div class="plan-cost"><b>0 Ft</b>~12 munkaóra</div>
+    </div>
+
+    <div class="plan-row">
+      <div class="plan-week">03</div>
+      <div class="plan-title">„DAAD 2026 Edition" limitált sorozat élesítése</div>
+      <div class="plan-detail">30-darabos limitált, kifejezetten DAAD-ra hangolt sorozat, előrendeléssel. Countdown a weboldalon, 3 teaser-poszt Instán + a DJ-k pre-fest poszt-cseréje. <b>Reális bevétel: ~450.000 Ft a fesztivál hetében.</b></div>
+      <div class="plan-cost"><b>~30k Ft</b>posta + alapanyag</div>
+    </div>
+
+    <div class="plan-row">
+      <div class="plan-week">04</div>
+      <div class="plan-title">DAAD hétvégéje — helyszíni fotó/videó-anyag</div>
+      <div class="plan-detail">Magaddal viszel 5–10 táskát, ráadod barátaidra, fotózod a fesztiválon. <b>Egész nyári Insta + webshop hero tartalom egy hétvégéből.</b> A 30 darabos DAAD Edition odaát ér a vevőkhöz, és aki ott megveszi, megosztja.</div>
+      <div class="plan-cost"><b>0 Ft</b>~2 napod, amit úgyis ott töltesz</div>
+    </div>
+
+    <div class="plan-row">
+      <div class="plan-week">04</div>
+      <div class="plan-title">HILO Coins klubrendszer bevezetése</div>
+      <div class="plan-detail">Egyszerű hűségprogram: 100 Ft = 1 coin, regisztrációért +1.000 coin, ajándékozásért és értékelésért bónusz. Visszaváltható kedvezményekre, custom paracordra, ingyen szállításra. <b>Visszatérő vásárló aránya 2–3×.</b></div>
+      <div class="plan-cost"><b>0 Ft</b>~6 munkaóra</div>
+    </div>
+  </div>
+
+  <div class="plan-foot">
+    <div>
+      <small>Mennyit fizetsz összesen</small>
+      <b>~190.000<em>&nbsp;Ft</em></b>
+      <p>Fotózás + posta + 5 ingyen táska az influencereknek. Ennyi pénz kell egyszer a teljes 30 naphoz — nincs havi költség.</p>
+    </div>
+    <div>
+      <small>Mennyit hoz vissza 3 hónap alatt</small>
+      <b>2–5<em>&nbsp;M Ft</em></b>
+      <p>Óvatos becslés: 1–2 céges rendelés + a megújult oldal + az első limitált sorozat. Reálisan ennél több is lehet — főleg, ha a B2B beindul.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DIVISION OF LABOR ═══ -->
+<section class="split">
+  <div class="moves-head">
+    <div>
+      <span class="eyebrow">Ki mit csinál</span>
+      <h2>Munkamegosztás <em>tisztán.</em></h2>
+    </div>
+    <div class="note">Csak akkor műxik,<br>ha mindkettő dolgozik.</div>
+  </div>
+
+  <div class="split-grid">
+    <div class="split-card me">
+      <h3>Amit én csinálok</h3>
+      <span class="sub">→ stratégia, sablon, útmutató — minden papíron</span>
+      <ul>
+        <li><b>Cégajándék 1-pager PDF</b> (50 / 100 / 250 / 500 db csomag-méretek, monogram, lead time, ár)</li>
+        <li><b>LinkedIn-üzenet sablon</b> + kontakt-lista 50 magyar HR-eshez</li>
+        <li><b>Webshop redesign</b> implementálása (a meglévő prototype továbbfejlesztése)</li>
+        <li><b>Termék-copy</b> átírása emberi nyelvre mind a ~20 modellre</li>
+        <li><b>Fotózási útmutató</b> (ez a dokumentum) + Lightroom „HILO golden" preset, amit csak alkalmazol</li>
+        <li><b>Drop-naptár</b> első 6 hónapja: dátumok, kollab-ötletek, teaser-szövegek</li>
+        <li><b>HILO Coins klubrendszer</b> UX-terve (Shopify app-pal megoldható, ~3.000 Ft/hó)</li>
+        <li><b>Heti 30 perces review</b> az első 12 héten — kávé mellett, élőben vagy Zoomon</li>
+      </ul>
+    </div>
+
+    <div class="split-card you">
+      <h3>Amit te csinálsz</h3>
+      <span class="sub">→ te ismersz mindenkit, te varrod, te fotózol</span>
+      <ul>
+        <li><b>Gyártási kapacitás</b> tartalékolása az első B2B rendeléshez (4–6 hét lead time reális)</li>
+        <li><b>B2B telefonok</b> — amikor valaki válaszol, te hívod fel (15 perc / hívás)</li>
+        <li><b>LinkedIn-üzenetek kiküldése</b> — 50 db, 3 perc / üzenet, kb. 2,5 óra összesen</li>
+        <li><b>Fotózás saját telefonnal</b> — az útmutató alapján, 1 szabad délután, 1 baráti modell</li>
+        <li><b>Influencer-választás</b> — te jobban tudod, ki passzol a brandhez (5 ember elég)</li>
+        <li><b>Csomagolás</b> kézzel írt köszönőkártyákkal — ez a HILO „touch", csak te tudod</li>
+        <li><b>Pénzügyi döntések</b> — én csak javaslok, te döntesz</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MANIFESTO QUOTE ═══ -->
+<section class="manifesto">
+  <span class="kicker">És végül — egy gondolat.</span>
+  <blockquote>Aki ezt megveszi, <em>nem tornazsákot</em> vesz.</blockquote>
+  <cite>— A teljes pitch egy mondatban</cite>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta">
+  <div class="cta-grid">
+    <div>
+      <span class="eyebrow">Következő lépés</span>
+      <h2>Találkozzunk egy <em>kávéra.</em></h2>
+      <p>Ha bármi ebből megfogott — vagy van benne olyan, amit teljesen másképp látsz —, dobj rá egy üzit, vagy hívj. Nem konzultáció, nem szerződés, csak egy kávé, ahogy szoktuk. Atikám, te tudod, hogy ha bármiben segíthetek a HILO-val, az nekem öröm — pont annyira, mintha Hanáról beszélnénk.</p>
+    </div>
+    <div class="contact-card">
+      <h4>Zsolti</h4>
+      <span class="sub">→ ahogy mindig</span>
+      <div class="contact-row">
+        <a href="mailto:zsoltipi@gmail.com">
+          <span class="ic"><svg width="20" height="20"><use href="#mail-i"/></svg></span>
+          <span><small>Email</small><b>zsoltipi@gmail.com</b></span>
+        </a>
+        <a href="tel:+36706840031">
+          <span class="ic"><svg width="20" height="20"><use href="#phone-i"/></svg></span>
+          <span><small>Telefon</small><b>+36 70 684 0031</b></span>
+        </a>
+        <a href="#">
+          <span class="ic"><svg width="20" height="20"><use href="#calendar-i"/></svg></span>
+          <span><small>Naptárfoglalás</small><b>30 perc kávé / Zoom</b></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="foot">
+  <span>2026 · Zsolti → Ati</span>
+  <span class="center"><svg><use href="#pineapple"/></svg> HILO BAGS</span>
+  <span class="right">vasárnap esti spekuláció</span>
+</footer>
+
+<script>
+const prog=document.getElementById('progress');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const p=(h.scrollTop)/(h.scrollHeight-h.clientHeight);
+  prog.style.width=(p*100)+'%';
+},{passive:true});
+
+// gentle reveal
+const io=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity=1;x.target.style.transform='translateY(0)'}})
+},{threshold:.12});
+function copyTpl(btn){
+  const txt=document.getElementById('tpl').innerText;
+  navigator.clipboard.writeText(txt).then(()=>{
+    btn.textContent='Vágólapra másolva ✓';
+    btn.classList.add('done');
+    setTimeout(()=>{btn.textContent='Másolás vágólapra';btn.classList.remove('done')},2200);
+  }).catch(()=>{
+    btn.textContent='Jelöld ki kézzel és másold';
+  });
+}
+document.querySelectorAll('.problem, .move, .plan-row, .split-card, .cover-tape > div, .plan-foot > div, .exrow, .step, .s-card, .s-row, .shoot-section, .checklist, .callout, .fa, .fest-week, .fest-urgency').forEach(el=>{
+  el.style.opacity=0;el.style.transform='translateY(24px)';el.style.transition='all .9s cubic-bezier(.2,.7,.2,1)';
+  io.observe(el);
+});
+</script>
+</body>
+</html>
