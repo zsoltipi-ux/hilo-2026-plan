@@ -261,6 +261,39 @@ details > .more .example b{display:block;font-family:var(--mono);font-style:norm
   .targets .grid{grid-template-columns:repeat(2,1fr)}
 }
 
+/* ─── MANAS spotlight ─────────────────── */
+.manas{
+  margin-bottom:48px;position:relative;padding:36px;
+  background:linear-gradient(135deg,rgba(184,117,95,0.14),rgba(184,137,60,0.10));
+  border:1px solid var(--rose);
+  display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:start;
+}
+.manas::before{content:"⚡ HOT LEAD";position:absolute;top:-12px;left:24px;padding:5px 12px;background:var(--rose);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.32em;text-transform:uppercase;font-weight:500}
+.manas .tag{font-family:var(--mono);font-size:10px;letter-spacing:.32em;color:var(--rose);text-transform:uppercase;display:block;margin-bottom:10px}
+.manas h3{margin:0 0 10px;font-family:var(--display);font-size:32px;color:var(--paper);font-weight:400;letter-spacing:.02em;line-height:1.05}
+.manas h3 em{color:var(--rose);font-style:italic;font-family:var(--serif);font-weight:300}
+.manas p{margin:0 0 14px;font-size:15px;line-height:1.65;color:rgba(243,237,224,0.82)}
+.manas p b{color:var(--paper)}
+.manas ul{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:10px}
+.manas ul li{position:relative;padding-left:28px;font-size:15px;line-height:1.5;color:rgba(243,237,224,0.78)}
+.manas ul li::before{content:"";position:absolute;left:0;top:.7em;width:18px;height:1px;background:var(--rose)}
+.manas ul li b{color:var(--paper)}
+.manas .warn{margin-top:12px;padding:14px 18px;background:rgba(0,0,0,0.32);border-left:2px solid var(--gold);font-family:var(--serif);font-style:italic;font-size:14px;color:rgba(243,237,224,0.78);line-height:1.5}
+.manas .warn b{color:var(--gold)}
+
+.manas-msg{position:relative;padding:24px;background:rgba(0,0,0,0.5);border:1px solid rgba(243,237,224,0.16)}
+.manas-msg .ribbon{position:absolute;top:-10px;left:20px;padding:4px 10px;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.32em;text-transform:uppercase;font-weight:500}
+.manas-msg h5{margin:8px 0 4px;font-family:var(--display);font-size:18px;color:var(--paper);font-weight:400;letter-spacing:.02em}
+.manas-msg .sub{font-family:var(--hand);color:var(--gold);font-size:18px;line-height:1;display:block;margin-bottom:14px}
+.manas-msg pre{margin:0;padding:18px;background:rgba(243,237,224,0.04);border:1px solid rgba(243,237,224,0.10);font-family:var(--mono);font-size:12.5px;line-height:1.7;color:rgba(243,237,224,0.92);white-space:pre-wrap;letter-spacing:.01em;font-weight:300}
+.manas-msg .copy{margin-top:12px;width:100%;padding:12px;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:10px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;border:0;cursor:pointer;transition:background .3s var(--easing-soft)}
+.manas-msg .copy:hover{background:#e0a850}
+.manas-msg .copy.done{background:#84a96a}
+
+@media (max-width:980px){
+  .manas{grid-template-columns:1fr;gap:24px}
+}
+
 /* ─── FESZTIVÁL STRATÉGIA ─────────────── */
 .fest{background:linear-gradient(180deg,#0d0a07,#080605);color:var(--paper);border-block:1px solid var(--line-soft);position:relative;overflow:hidden}
 .fest::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 40% at 80% 20%,rgba(184,117,95,0.18),transparent 60%),radial-gradient(50% 50% at 20% 80%,rgba(184,137,60,0.12),transparent 60%);pointer-events:none}
@@ -815,6 +848,43 @@ footer.foot .right{justify-self:end}
     </div>
   </div>
 
+  <div class="manas">
+    <div>
+      <span class="tag">A legközelebbi konkrét lehetőség</span>
+      <h3>Manas × HILO — <em>Isit a kulcs.</em></h3>
+      <p><b>Isit a Manas fesztivál főszervezője, és Zsolti haverja.</b> Vagyis van egy közös ismerős a kapunál. A Manas közönsége pontosan a Magic Art kollekció vevője — UV, mandala, psy-vibe. Ezt nem kell senkinek elmagyarázni.</p>
+      <p style="color:var(--paper);font-size:17px"><b>Mit lehet kérni Isit-től — sorrendben, a legkönnyebbtől a legnagyobbig:</b></p>
+      <ul>
+        <li><b>1. Crew-collab:</b> a Manas fellépő DJ-i + crew kapnak ingyen HILO táskát (10–15 db) → cserébe Insta-tag a fesztivál hetén</li>
+        <li><b>2. „Manas × HILO" limitált sorozat:</b> 30 db UV-fest tornazsák, csak a fesztiválra, közös bejelentés Manas és HILO csatornán → <b>~450k Ft bevétel</b></li>
+        <li><b>3. Stand / pop-up a chillout-zónában:</b> ha bír — vagy a crew-collab részeként ingyen → 3 napos láthatóság a teljes közönségnek</li>
+        <li><b>4. After-party / VIP gift drop:</b> a Manas-közeli after-bulin VIP-eknek HILO ajándék → organikus elérés</li>
+      </ul>
+      <div class="warn"><b>Atikám, óvatosan.</b> Isit barát-szinten áll Zsoltival is — egy-két ilyen kérés után „elkopik". Ezért NE pénzügyi deal-t ajánlj neki (jutalék, fizetős stand) — barter, kölcsönösen-jó cserét keress. Ha nemet mond, az is rendben — köszi-üzenet és nyár végén kávé.</div>
+    </div>
+    <div class="manas-msg">
+      <span class="ribbon">Kész üzenet — másold ki, küldd Isit-nek</span>
+      <h5>Messenger / WhatsApp — baráti tónus</h5>
+      <span class="sub">→ NEM hivatalos e-mail</span>
+      <pre id="manas-tpl">Szia Isit!
+
+Régóta forgatok valamit a fejemben, de még nem szóltam.
+
+A HILO-nak van egy Magic Art kollekciója — UV, mandala, psy-vibe — és érzem, hogy a Manas közönsége pont ennek a megrendelője. Nem akarok ráhágni semmilyen tervedre, csak gondoltam megkérdezem, van-e valami formátum, amiben együtt mehetnénk.
+
+Pár ötlet, csak hogy lássd, mire gondoltam:
+• HILO × Manas limitált sorozat (30 db UV, csak a fesztiválra)
+• A fellépő DJ-knek ingyen táska + Insta-csere
+• Egy stand vagy pop-up a chillout-zónában
+
+Bármelyiket átbeszélhetjük kávé / sör mellett, ha érdekel. Vagy ha azt mondod, „inkább nem ezt a kört" — semmi gond, csak gondoltam, szólok.
+
+Üdv,
+Ati · HILO Bags</pre>
+      <button class="copy" onclick="copyManas(this)">Másolás vágólapra</button>
+    </div>
+  </div>
+
   <div class="fest-actions">
 
     <div class="fa">
@@ -1353,7 +1423,17 @@ function copyTpl(btn){
     btn.textContent='Jelöld ki kézzel és másold';
   });
 }
-document.querySelectorAll('.problem, .move, .plan-row, .split-card, .cover-tape > div, .plan-foot > div, .exrow, .step, .s-card, .s-row, .shoot-section, .checklist, .callout, .fa, .fest-week, .fest-urgency').forEach(el=>{
+function copyManas(btn){
+  const txt=document.getElementById('manas-tpl').innerText;
+  navigator.clipboard.writeText(txt).then(()=>{
+    btn.textContent='Vágólapra másolva ✓';
+    btn.classList.add('done');
+    setTimeout(()=>{btn.textContent='Másolás vágólapra';btn.classList.remove('done')},2200);
+  }).catch(()=>{
+    btn.textContent='Jelöld ki kézzel';
+  });
+}
+document.querySelectorAll('.problem, .move, .plan-row, .split-card, .cover-tape > div, .plan-foot > div, .exrow, .step, .s-card, .s-row, .shoot-section, .checklist, .callout, .fa, .fest-week, .fest-urgency, .manas, .manas-msg').forEach(el=>{
   el.style.opacity=0;el.style.transform='translateY(24px)';el.style.transition='all .9s cubic-bezier(.2,.7,.2,1)';
   io.observe(el);
 });
